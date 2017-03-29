@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
+    "summary": "Elm support for the RFC2822 datetime format",
     "repository": "https://github.com/stil4m/rfc2822-datetime.git",
     "license": "BSD3",
     "source-directories": [
@@ -9,7 +9,7 @@
     "exposed-modules": ["Rfc2822Datetime"],
     "dependencies": {
         "elm-community/parser-combinators": "1.0.0 <= v < 2.0.0",
-        "elm-lang/core": "5.1.1 <= v < 6.0.0"
+        "elm-lang/core": "5.0.0 <= v < 6.0.0"
     },
     "elm-version": "0.18.0 <= v < 0.19.0"
 }
