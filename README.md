@@ -11,3 +11,5 @@ parsedDate : Result String Datetime
 parsedDate =
     Rfc2822Datetime "Mon, 06 Mar 2017 21:22:23 +0000"
 ```
+
+Please [report](https://github.com/stil4m/rfc2822-datetime/issues) issues if you encounter any and feature requests.
