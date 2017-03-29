@@ -1,5 +1,7 @@
 # RFC2822 Datetime
 
+<img src="https://ci.appveyor.com/api/projects/status/github/stil4m/rfc2822-datetime?branch=master&retina=true" height="24">
+
 Elm package that supports parsing datetime strings specified in the [RFC2822](https://tools.ietf.org/html/rfc2822).
 
 ```
