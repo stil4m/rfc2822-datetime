@@ -1,11 +1,11 @@
-module Rfc2822DateTime exposing (DateTime, Date, Time, WeekDay(..), Month(..), Zone(..), parse)
+module Rfc2822Datetime exposing (Datetime, Date, Time, WeekDay(..), Month(..), Zone(..), parse)
 
 {-| This implementation follows section 3.3 of the [RFC2822](https://tools.ietf.org/html/rfc2822#section-3.3) specification.
 
 
 ## Types
 
-@docs DateTime, Date, Time, WeekDay, Month, Zone
+@docs Datetime, Date, Time, WeekDay, Month, Zone
 
 ## Parsing
 
@@ -20,7 +20,7 @@ import Combine.Char exposing (digit)
 
 {-| Record containing all the date time information in the [RFC2822](https://tools.ietf.org/html/rfc2822) standard.
 -}
-type alias DateTime =
+type alias Datetime =
     { dayOfWeek : Maybe WeekDay
     , date : Date
     , time : Time
@@ -92,14 +92,14 @@ type Zone
     | Military Char
 
 
-{-| Parse a raw string to DateTime.
+{-| Parse a raw string to Datetime.
 
     parse "Mon, 06 Mar 2017 21:22:23 +0000" == Ok { date = { year = 2017, month = Mar, day = 6 }, time = { hour = 21, minute = 22, second = Just 23, zone = Offset 0 }}
     parse "foo" == Err
 -}
-parse : String -> Result String DateTime
+parse : String -> Result String Datetime
 parse input =
-    case Combine.parse dateTime input of
+    case Combine.parse datetime input of
         Ok ( _, _, s ) ->
             Ok s
 
@@ -107,9 +107,9 @@ parse input =
             Err "Could not parse input"
 
 
-dateTime : Parser s DateTime
-dateTime =
-    succeed DateTime
+datetime : Parser s Datetime
+datetime =
+    succeed Datetime
         <*> (maybe (dayOfWeek <* maybe (string ",")))
         <*> date
         <*> (fws *> time <* maybe cfws)

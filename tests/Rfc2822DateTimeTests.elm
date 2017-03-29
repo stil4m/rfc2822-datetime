@@ -1,11 +1,11 @@
-module Rfc2822DateTimeTests exposing (suite)
+module Rfc2822DatetimeTests exposing (suite)
 
 import Test exposing (..)
 import Expect
-import Rfc2822DateTime exposing (DateTime, Month(..), Zone(..), WeekDay(..))
+import Rfc2822Datetime exposing (Datetime, Month(..), Zone(..), WeekDay(..))
 
 
-parseTuples : List ( String, DateTime )
+parseTuples : List ( String, Datetime )
 parseTuples =
     [ ( "6 Mar 17 21:22 UT"
       , { dayOfWeek = Nothing
@@ -64,11 +64,11 @@ parseTuples =
     ]
 
 
-testParseTuple : ( String, DateTime ) -> Test
+testParseTuple : ( String, Datetime ) -> Test
 testParseTuple ( input, output ) =
     test ("Should parse " ++ input) <|
         \() ->
-            Rfc2822DateTime.parse input
+            Rfc2822Datetime.parse input
                 |> Expect.equal (Ok output)
 
 

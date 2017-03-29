@@ -11,6 +11,8 @@ install:
 
 # Post-install test scripts.
 test_script:
-  - npm run elm-format-help
+  - npm run download-elm-format
+  - npm run elm-format
+  - npm run test
 
 build: off

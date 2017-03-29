@@ -1,0 +1,20 @@
+{
+  "name": "rfc2822-date-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "download-elm-format": "./node_modules/.bin/elm-format-download -t ./node_modules/.bin",
+    "elm-format": "./node_modules/.bin/elm-format --validate src/ tests/",
+    "test": "./node_modules/.bin/elm-test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "elm": "0.18.0",
+    "elm-format-download": "0.2.4"
+  }
+}
