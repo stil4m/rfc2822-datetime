@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "summary": "Elm support for the RFC2822 datetime format",
     "repository": "https://github.com/stil4m/rfc2822-datetime.git",
     "license": "BSD3",
