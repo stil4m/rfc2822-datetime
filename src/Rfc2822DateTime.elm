@@ -7,6 +7,7 @@ module Rfc2822Datetime exposing (Datetime, Date, Time, WeekDay(..), Month(..), Z
 
 @docs Datetime, Date, Time, WeekDay, Month, Zone
 
+
 ## Parsing
 
 @docs parse
@@ -96,6 +97,7 @@ type Zone
 
     parse "Mon, 06 Mar 2017 21:22:23 +0000" == Ok { date = { year = 2017, month = Mar, day = 6 }, time = { hour = 21, minute = 22, second = Just 23, zone = Offset 0 }}
     parse "foo" == Err
+
 -}
 parse : String -> Result String Datetime
 parse input =
